@@ -11,6 +11,14 @@ const routes: Routes = [{
     {
       path:'',
       loadChildren: ()=> import('src/app/feature/auth/auth-routing.module').then(m=>m.AuthRoutingModule)
+    },
+    {
+      path:'',
+      loadChildren: ()=> import('src/app/feature/client/client-routing.module').then(m=>m.ClientRoutingModule)
+    },
+    {
+      path:'admin',
+      loadChildren: ()=> import('src/app/feature/admin/admin-routing.module').then(m=>m.AdminRoutingModule)
     }
   ]
 }];
